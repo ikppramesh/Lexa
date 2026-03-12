@@ -28,6 +28,20 @@ def read_clipboard() -> str:
             result = subprocess.run(["pbpaste"], capture_output=True, text=True, check=True)
             return result.stdout
         elif system == "Linux":
+            # Try primary selection first — this holds highlighted text on Linux
+            # (works on both X11 and Wayland/XWayland without needing Ctrl+C)
+            try:
+                result = subprocess.run(
+                    ["xclip", "-selection", "primary", "-o"],
+                    capture_output=True,
+                    text=True,
+                    check=True,
+                )
+                if result.stdout.strip():
+                    return result.stdout
+            except (subprocess.CalledProcessError, FileNotFoundError):
+                pass
+            # Fall back to clipboard (Ctrl+C copied text)
             result = subprocess.run(
                 ["xclip", "-selection", "clipboard", "-o"],
                 capture_output=True,
