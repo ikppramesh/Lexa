@@ -1,0 +1,12 @@
+.env
+*.key
+config.local.py
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+*.egg-info/
+dist/
+build/mac/*.dmg
+.venv/
+venv/

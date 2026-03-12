@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Lexa
+GenericName=AI English Assistant
+Comment=Correct English grammar and explain text using AI
+Icon=/opt/lexa/lexa.png
+Exec=/opt/lexa/lexa-setup
+Terminal=false
+Categories=Utility;Education;Office;
+Keywords=grammar;english;spelling;ai;correct;explain;
+StartupNotify=false
