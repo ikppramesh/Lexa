@@ -1,5 +1,9 @@
 # Lexa — AI English Correction & Explanation
 
+<p align="center">
+  <img src="lexa.png" alt="Lexa logo" width="160"/>
+</p>
+
 Lexa is a lightweight, system-level AI writing assistant that works in **any app** — email, Slack, IDE, browser, terminal. Select any text, right-click, and instantly correct your English or get a plain-English explanation powered by OpenRouter LLMs.
 
 **Free to use** — works with free OpenRouter models at $0 cost.
